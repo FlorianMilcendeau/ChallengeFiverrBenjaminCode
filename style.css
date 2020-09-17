@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #04072d;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 95%;
+  height: 95%;
+  background-color: transparent;
+  border: 5px solid #fbf250;
+  overflow: hidden;
+}
+
+.bannerName,
+.bannerProfession {
+  font-family: "gtfxebl";
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.bannerName li {
+  font-size: 15vh;
+  margin-left: 2%;
+  width: max-content;
+  min-width: max-content;
+  animation-name: slideRight;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+.bannerProfession li:nth-child(2n + 1),
+.bannerName li:nth-child(2n + 1) {
+  color: #fbf250;
+}
+
+.bannerProfession li:nth-child(even),
+.bannerName li:nth-child(even) {
+  color: transparent;
+  -webkit-text-stroke: 0.01em #fffa76;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(-91vw);
+  }
+}
+
+.bannerProfession {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 5px solid #fbf250;
+  border-bottom: 5px solid#fbf250;
+}
+
+.bannerProfession li {
+  font-size: 5vh;
+  margin-left: 2%;
+  width: max-content;
+  min-width: max-content;
+  animation-name: slideLeft;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-57.5vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.parallaxEffect {
+  position: relative;
+  width: 50vw;
+  height: 100%;
+}
+
+.round,
+.roundSmall {
+  position: absolute;
+  width: 25em;
+  height: 25em;
+  border-radius: 100%;
+  background-color: #fbf250;
+  bottom: 0;
+  left: 9em;
+  transform: translate(0, -10vh);
+}
+
+.benjaminCode {
+  position: absolute;
+  width: 650px;
+  bottom: 0;
+  left: 15em;
+  transform: translate(-30%, 0);
+}
+
+.roundSmall {
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  bottom: 8em;
+  left: 30em;
+  transform: translate(0, 5vh);
+}
+
+address {
+  display: inline-block;
+}
+.info {
+  font-size: 1.05em;
+  font-family: "gtfr";
+  font-style: italic;
+  color: #fbf250;
+  text-align: left;
+  max-width: 30%;
+  line-height: 1.5em;
+}
+
+.iconMail {
+  width: 3em;
+  vertical-align: middle;
+  margin-right: 1em;
+}
+
+a {
+  color: #fbf250;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .round {
+    width: 20em;
+    height: 20em;
+  }
+
+  .benjaminCode {
+    width: 550px;
+  }
+
+  .roundSmall {
+    width: 2em;
+    height: 2em;
+  }
+
+  .info {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  main {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .bannerName li {
+    font-size: 15vh;
+  }
+
+  .bannerProfession li {
+    font-size: 5vh;
+  }
+
+  .round {
+    position: absolute;
+    width: 12em;
+    height: 12em;
+    border-radius: 100%;
+    background-color: #fbf250;
+    bottom: -10%;
+    left: 10%;
+    transform: translate(0, -50%);
+  }
+
+  .benjaminCode {
+    position: absolute;
+    width: 35vh;
+    bottom: 0;
+    left: 25%;
+    transform: translate(-25%, 0);
+  }
+
+  .roundSmall {
+    width: 1.5em;
+    height: 1.5em;
+    bottom: 7em;
+    left: 55%;
+  }
+
+  .info {
+    margin-top: 3em;
+    font-size: 1em;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .bannerName li {
+    font-size: 8vh;
+  }
+
+  .bannerProfession li {
+    font-size: 3vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bannerName li {
+    font-size: 8vh;
+  }
+
+  .bannerProfession li {
+    font-size: 3vh;
+  }
+
+  .round {
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    bottom: -2em;
+  }
+
+  .benjaminCode {
+    width: 35vh;
+    bottom: 0;
+    left: 25%;
+    transform: translate(-25%, 0);
+  }
+
+  .roundSmall {
+    width: 1.5em;
+    height: 1.5em;
+    bottom: 25%;
+    left: 80%;
+  }
+
+  .info {
+    margin-top: 5%;
+    font-size: 1.5vh;
+    max-width: 90%;
+  }
+}
