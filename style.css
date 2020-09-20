@@ -65,7 +65,7 @@ body {
     transform: translateX(0vw);
   }
   100% {
-    transform: translateX(-91vw);
+    transform: translateX(-211.2%);
   }
 }
 
@@ -90,7 +90,7 @@ body {
 
 @keyframes slideLeft {
   0% {
-    transform: translateX(-57.5vw);
+    transform: translateX(-22.92em);
   }
   100% {
     transform: translateX(0vw);
@@ -240,6 +240,15 @@ a {
 
   .bannerProfession li {
     font-size: 3vh;
+  }
+
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(-22.85em);
+    }
+    100% {
+      transform: translateX(0vw);
+    }
   }
 }
 
