@@ -45,7 +45,7 @@ body {
   animation-name: slideRight;
   animation-duration: 40s;
   animation-iteration-count: infinite;
-  animation-fill-mode: backwards;
+  animation-fill-mode: both;
   animation-timing-function: linear;
 }
 
@@ -84,7 +84,7 @@ body {
   animation-name: slideLeft;
   animation-duration: 15s;
   animation-iteration-count: infinite;
-  animation-fill-mode: backwards;
+  animation-fill-mode: both;
   animation-timing-function: linear;
 }
 
